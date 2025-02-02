@@ -1,0 +1,7 @@
+Pascal's Triangle
+Run Program
+TEST CASES:
+n = 2, 5, 7, 10
+
+Spiral Matrix
+My program will randomly generate a new matrix every time it is run, given the user gives the length and width of the matrix.
