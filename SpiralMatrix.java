@@ -2,9 +2,11 @@ package Hands_on_Lecture_2;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 
 class SpiralMatrix {
-    public List<Integer> spiralOrder(int[][] matrix) {
+    public static List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> result = new ArrayList<>();
         int rowStart = 0;
         int columnStart = 0;
@@ -57,5 +59,37 @@ class SpiralMatrix {
 
         // Return List
         return result;
+    }
+
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Please enter number of rows: ");
+        int rows = s.nextInt();
+
+        System.out.print("Please enter number of columns: ");
+        int columns = s.nextInt();
+
+        int[][] matrix = new int[rows][columns];
+
+        for(int i = 0; i < rows; ++i){
+            for(int j = 0; j < columns; ++j){
+                matrix[i][j] = (int)(Math.random() * 10);
+            }
+        }
+
+        System.out.println();
+        System.out.println("Generating Random Matrix: ");
+
+        System.out.println("Matrix: ");
+        for(int i = 0; i < rows; ++i){
+            for(int j = 0; j < columns; ++j){
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+        System.out.println(spiralOrder(matrix));
     }
 }
